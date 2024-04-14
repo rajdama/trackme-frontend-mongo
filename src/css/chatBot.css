@@ -1,0 +1,114 @@
+#page-cont{
+  width: 100vw; height: 100vh; display: flex; flex-direction: row;
+}
+#disp-img{
+  height: 40px; width: 40px; border-radius: 2px; margin-right: 2vw;
+}
+.chat-container {
+  width: 95vw;
+  height: 100vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(237, 234, 234) !important;
+  padding: 10px;
+}
+
+.chat-messages {
+  height: 80%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  min-width:86%;
+  display:flex; flex-direction: row;
+  align-items: center;
+}
+.text-msg{
+  width: 50vw;
+}
+.chat-message.user {
+  background-color: white;
+  min-height: 10vh;
+  display: flex; flex-direction: row; justify-content: flex-start;
+  padding-left:15%;
+  color: black;
+  font-family: 'menlo';
+}
+
+.chat-message.bot {
+  background-color: #dadada;
+  min-height: 30vh;
+  display: flex; flex-direction: row; justify-content: flex-start;
+  padding-left:15%;
+  color: black;
+  max-width: 50vw;
+  font-family: 'menlo';
+  font-weight: bold;
+}
+
+.chat-form {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  width:50vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 8vh;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px grey;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  height: 100%;
+  background-color: transparent; 
+}
+
+.chat-submit-button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 1vw;
+  height: 20px; width: 20px;
+}
+
+.chat-submit-button:hover {
+  background-color: #45a049;
+}
+@media (max-width: 500px) {
+  #page-cont{
+    flex-direction: column-reverse;
+  }
+  .chat-form{
+    width: 80vw;
+  }
+  .chat-messages{
+    height:75vh;
+  }
+  .chat-submit-button{
+    margin-right:20px;
+  }
+  .chat-container{
+    width: 100vw;
+  }
+  .chat-input{
+    width:80%;
+  }
+}
